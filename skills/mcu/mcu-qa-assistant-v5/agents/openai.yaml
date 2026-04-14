@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCU QA Assistant V5"
+  short_description: "Evidence-first MCU QA with critical-detail canonical facts and governed code-analysis fallback"
+  default_prompt: "Use $mcu-qa-assistant-v5 to answer questions from the current MCU project knowledge pack. Read machine_index first. For exact-detail questions about timebase, timeout, retry count, threshold, default value, size, frequency, or period, prefer 08_ai_enrichment/critical_detail_facts.json when doc_catalog exposes it. If a matching detail item is resolved, answer from it; if it is missing or unresolved, open 08_ai_enrichment/qa_code_analysis_playbook.json, choose the closest question family, and only then perform targeted source analysis in sibling 09_source_snapshot. Never guess unresolved project details. Separate direct evidence, code inference, and uncertainty in the final answer."
